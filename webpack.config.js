@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const hotMiddlewareScript = 'webpack-hot-middleware/client?reload=true';
 
 const excluded = /node_modules(\/|\\)((?!(omni-common-ui)).)/;
-const publicPath = 'http://localhost:8000';
+const publicPath = 'http://localhost:3000';
 
 module.exports = {
   entry: {

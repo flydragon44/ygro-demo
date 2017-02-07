@@ -1,5 +1,5 @@
 {
-  "name": "webpack-demo",
+  "name": "ygro-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -34,13 +34,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flydragon44/webpack-demo.git"
+    "url": "git+https://github.com/flydragon44/ygro-demo.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/flydragon44/webpack-demo/issues"
+    "url": "https://github.com/flydragon44/ygro-demo/issues"
   },
-  "homepage": "https://github.com/flydragon44/webpack-demo#readme"
+  "homepage": "https://github.com/flydragon44/ygro-demo#readme"
 }
