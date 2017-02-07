@@ -1,0 +1,17 @@
+[{
+  "transactionDetailId": "1",
+  "displayedTransactionId": "JRR-0000000001",
+  "merchant": "Joah's Restaurant",
+  "item": "Carbonara",
+  "price": 13.99,
+  "city": "San Francisco",
+  "salesTax": 1.19
+}, {
+  "transactionDetailId": "2",
+  "displayedTransactionId": "DSW-0000000001",
+  "merchant": "Daniel's Sportswear, Inc.",
+  "item": "Sports Jersey",
+  "price": 119.99,
+  "city": "Los Angeles",
+  "salesTax": 10.5
+}]

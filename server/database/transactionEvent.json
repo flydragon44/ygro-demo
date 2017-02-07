@@ -1,0 +1,9 @@
+[{
+  "transactionEventId": "1",
+  "status": "handled",
+  "transactionDetailId": "1"
+}, {
+  "transactionEventId": "2",
+  "status": "new",
+  "transactionDetailId": "2"
+}]

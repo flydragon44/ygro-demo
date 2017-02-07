@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "alasql": "^0.3.6",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-polyfill": "^6.22.0",
@@ -15,6 +16,7 @@
     "html-webpack-plugin": "^2.28.0",
     "jquery": "^3.1.1",
     "lodash": "^4.17.4",
+    "rootpath": "^0.1.2",
     "webpack": "^2.2.1",
     "webpack-combine-loaders": "^2.0.3",
     "webpack-dev-middleware": "^1.10.0",
@@ -29,8 +31,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=dev nodemon --ignore client app",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js",
-    "build:run": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --hot --inline --port 3000"
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",

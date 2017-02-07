@@ -28,6 +28,7 @@ app.use(webpackDevMiddleware(compiler, {
 app.use(webpackHotMiddleware(compiler));
 
 require('./server/routes')(app);
+require('./server/api')(app);
 
 const reload = require('reload');
 const http = require('http');
