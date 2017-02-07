@@ -1,14 +1,22 @@
 const path = require('path');
 const webpack = require('webpack');
-const excluded = /node_modules(\/|\\)((?!(omni-common-ui)).)/;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const hotMiddlewareScript = 'webpack-hot-middleware/client?reload=true';
+
+const excluded = /node_modules(\/|\\)((?!(omni-common-ui)).)/;
+const publicPath = 'http://localhost:8000';
 
 module.exports = {
-  entry: './app/app.js',
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+  entry: {
+    signIn: ['./client/signIn', hotMiddlewareScript],
+    dashboards: ['./client/dashboards', hotMiddlewareScript],
   },
+  output: {
+    filename: './[name]/bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath,
+  },
+  devtool: 'source-map',
   module: {
     loaders: [{
       test: /\.js$/,
@@ -20,6 +28,10 @@ module.exports = {
           cacheDirectory: true,
         },
       },
+    },
+    {
+      test: /\.scss$/,
+      loader: 'style!css?sourceMap!resolve-url!sass?sourceMap',
     }],
   },
   plugins: [
@@ -28,8 +40,6 @@ module.exports = {
       jQuery: "jquery",
     }),
     new webpack.optimize.UglifyJsPlugin(),
-    new HtmlWebpackPlugin({
-      template: './app/index.html',
-    }),
+    new webpack.HotModuleReplacementPlugin()
   ],
 };
